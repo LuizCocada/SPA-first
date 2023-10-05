@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>SPA</title>
+</head>
+<body>
+
+    <nav>
+        <img src="./pages/assets/logo.svg" alt="logo.">
+        <a href="/" onclick="route(); handleBackground('./pages/assets/home-bg.jpg')" >home</a>
+        <a href="/universo" onclick="route(); handleBackground('./pages/assets/universe-bg.png')">O Universo</a>
+        <a href="/exploracao" onclick="route(); handleBackground('./pages/assets/exploration.png')">Exploração</a>
+    </nav>
+
+
+    <div id="app"></div>
+    <script src="./JS/index.js" type="module">
+    </script>
+
+    <script>
+        function handleBackground(imageURL) {
+            const body = document.body;
+            body.style.backgroundImage = `url(${imageURL})`;
+}
+
+    </script>
+
+</body>
+</html>
